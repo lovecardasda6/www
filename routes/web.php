@@ -30,8 +30,11 @@ Route::get('/payroll', function () {
     return view('payroll');
 });
 
-
-
 Route::get('/earning', function () {
     return view('earning');
+});
+
+
+Route::get('/earning-type', function () {
+    return view('earning_type');
 });
