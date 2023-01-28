@@ -10,6 +10,6 @@ class Earning extends Model
     use HasFactory;
 
     public function earningType(){
-        return $this->belongsTo(EarningType::class);
+        return $this->belongsTo(EarningType::class, "earning_type_id");
     }
 }
