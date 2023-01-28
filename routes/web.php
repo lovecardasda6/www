@@ -30,3 +30,8 @@ Route::get('/payroll', function () {
     return view('payroll');
 });
 
+
+
+Route::get('/earning', function () {
+    return view('earning');
+});

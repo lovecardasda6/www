@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Earning extends Model
 {
     use HasFactory;
+
+    public function earningType(){
+        return $this->belongsTo(EarningType::class);
+    }
 }

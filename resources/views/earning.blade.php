@@ -1,5 +1,6 @@
 @extends('index')
 
+
 @section('sidebar')
     <div class="bg-white p-3 shadow  font-sans text-sm">
         <ul>
@@ -11,5 +12,6 @@
 @endsection
 
 @section('content')
-    <livewire:payroll-component/>
+
+    <livewire:earning-component/>
 @endsection

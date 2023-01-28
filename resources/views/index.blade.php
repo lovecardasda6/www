@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
     <!-- flowbitecss -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet"/>
 
 
     <livewire:styles/>
@@ -26,6 +26,7 @@
         <li class="inline-block"><a class="font-semibold text-slate-700" href="payroll">Payroll</a></li> &nbsp;
     </ul>
 </div>
+@yield("sidebar")
 <div class=" p-3">
     @yield('content')
 </div>

@@ -177,7 +177,7 @@
                                     {{++$key}}
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{$earning->earning_name}}
+{{--                                    {{$earning->earning_name}}--}}
                                 </td>
                                 <td class="px-6 py-4">
                                     {{$earning->amount}}

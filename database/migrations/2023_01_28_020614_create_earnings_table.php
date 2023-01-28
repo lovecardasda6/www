@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('earnings', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(\App\Models\Employee::class);
-            $table->string("earning_name");
+            $table->foreignIdFor(\App\Models\EarningType::class);
             $table->double("amount");
             $table->timestamps();
         });

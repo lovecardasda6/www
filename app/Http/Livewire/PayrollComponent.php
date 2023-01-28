@@ -81,7 +81,7 @@ class PayrollComponent extends Component
 
     public function employeeEarnings()
     {
-        $this->employeeEarnings = Earning::where("employee_id", $this->empId)->orderBy("earning_name")->get();
+        $this->employeeEarnings = Earning::where("employee_id", $this->empId)->get();
     }
 
     public function resetInput()
