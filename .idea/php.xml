@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpCSFixer">
+    <phpcsfixer_settings>
+      <PhpCSFixerConfiguration tool_path="$PROJECT_DIR$/ci4_payroll/vendor/bin/php-cs-fixer" />
+    </phpcsfixer_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/composer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/rector/rector" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/php-cs-fixer/diff" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/codeigniter/coding-standard" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nexusphp/tachycardia" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nexusphp/cs-config" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/mikey179/vfsstream" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/kint-php/kint" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/annotations" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/ci4_payroll/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>

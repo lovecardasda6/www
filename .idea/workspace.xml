@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dce15a8e-02a8-46fc-9659-5ad07cd4ec27" name="Default Changelist" comment="init">
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/ci4_payroll/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/composer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/rector/rector" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/php-cs-fixer/diff" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/codeigniter/coding-standard" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nexusphp/tachycardia" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/nexusphp/cs-config" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/mikey179/vfsstream" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/kint-php/kint" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/ci4_payroll/vendor/doctrine/annotations" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2QmCzhFR9X1kGFGHIpQ39GbdQFR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\module" />
+      <recent name="C:\laragon\www\config" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dce15a8e-02a8-46fc-9659-5ad07cd4ec27" name="Default Changelist" comment="" />
+      <created>1685949640690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685949640690</updated>
+      <workItem from="1685949642737" duration="4190000" />
+      <workItem from="1686100077708" duration="17342000" />
+      <workItem from="1686188945937" duration="20220000" />
+      <workItem from="1686279616358" duration="16966000" />
+      <workItem from="1686456037414" duration="335000" />
+      <workItem from="1686624799061" duration="16822000" />
+      <workItem from="1686799500665" duration="11175000" />
+      <workItem from="1686882268467" duration="17787000" />
+      <workItem from="1686955011177" duration="2410000" />
+      <workItem from="1686974741500" duration="13830000" />
+      <workItem from="1687224866659" duration="6141000" />
+      <workItem from="1687514385669" duration="187000" />
+      <workItem from="1687514698073" duration="281000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1686990946546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686990946546</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1687231594719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687231594719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1687514789230</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687514789230</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1686990603940">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1686990603940" />
+    <state x="561" y="262" key="Github.ShareDialog" timestamp="1686990633472">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="561" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1686990633472" />
+    <state x="541" y="69" width="471" height="590" key="Github.UntrackedFilesDialog" timestamp="1686990643150">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="541" y="69" width="471" height="590" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1686990643150" />
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1686979571707">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1686979571707" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1687514797231">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1687514797231" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1686191186996">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1686191186996" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1686644164029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1686644164029" />
+  </component>
+</project>
