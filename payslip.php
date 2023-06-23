@@ -16,6 +16,7 @@ include_once __DIR__."/config/database.php";
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css " rel="stylesheet">
 
 
 </head>
@@ -186,5 +187,6 @@ include_once __DIR__."/config/database.php";
 </div>
 <br><br><br><br><br><br><br><br><br><br>
 <script src="app.js"></script>
+<script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js "></script>
 </body>
 </html>

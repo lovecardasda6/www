@@ -371,10 +371,20 @@ function savePaySlip() {
         url: "/services/payslip.php",
         data: JSON.stringify(content),
         success: function (response) {
-            console.log(response)
+            Swal.fire(
+            response,
+            'Success!',
+            'success'
+        )
         },
         error: function (response) {
-            alert("Please click compute first before saving.");
+            console.log(response);
+            Swal.fire(
+                response.responseText,
+                'Failure!',
+                'error'
+            )
+            // alert(response.responseText);
         }
 
     });

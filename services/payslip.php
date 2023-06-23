@@ -18,7 +18,8 @@ $is_posted_query = mysqli_query($conn,"SELECT is_posted FROM payrolls WHERE id =
 $is_posted_result = mysqli_fetch_assoc($is_posted_query);
 
 if($is_posted_result['is_posted'] == 1){
-    echo "Payroll is already posted.";
+    echo "Payroll is already posted!";
+    http_response_code(500);
     return;
 }
 
@@ -226,6 +227,6 @@ if ($is_transact):
         $query = mysqli_query($conn, $q);
     }
 
-    echo "Payroll transaction successfully save!";
+    echo "Transaction successfully save!";
 
 endif;

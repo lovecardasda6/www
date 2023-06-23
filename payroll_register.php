@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . "/config/database.php";
 
-$payroll_id = $_GET['payroll_id'];
+@$payroll_id = @$_GET['payroll_id'];
 
 //for fetching columns only
 //not for fetching employee amount payment
@@ -19,7 +19,6 @@ $ot_holiday_restday = mysqli_query($conn, "SELECT DISTINCT(type) as `description
                                                     INNER JOIN payroll_transactions ON payroll_transaction_ot_holiday_restday.payroll_transaction_id = payroll_transactions.id
                                                     WHERE payroll_id='{$payroll_id}'");
 $ot_hol_rest = mysqli_fetch_all($ot_holiday_restday);
-
 
 
 $total_earnings = 1;
@@ -103,16 +102,19 @@ $credit_sorted_list = [];
 
 <div class="container">
     <div class="content">
-
         <div style="display: flex; justify-content: space-between;background-color: #373b3e; padding: .7em;">
             <div style="color: white;">
                 <h4>Payroll Register</h4>
             </div>
-            <!--            <div>-->
-            <!--                <button class="btn btn-light btn-sm" onclick="toggleModule('addPayrollModule')">&nbsp; New Payroll-->
-            <!--                    &nbsp;-->
-            <!--                </button>-->
-            <!--            </div>-->
+            <div>
+
+                <a href="payroll_register_csv.php?payroll_id=<?= $payroll_id ?>">
+                    <button class="btn btn-light btn-sm">&nbsp;
+                        Download CSV file
+                        &nbsp;
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -129,7 +131,8 @@ $credit_sorted_list = [];
             <th scope="col" colspan="<?= $total_debit ?>" class="table-success">Debit</th><?php endif; ?>
 
             <?php if ($total_ot_hol_rest > 0): ?>
-            <th scope="col" colspan="<?= $total_ot_hol_rest ?>" class="table-success">OT/HOLIDAY/RESTDAY</th><?php endif; ?>
+            <th scope="col" colspan="<?= $total_ot_hol_rest ?>" class="table-success">
+                    OT/HOLIDAY/RESTDAY</th><?php endif; ?>
 
 
             <?php if ($total_deductions > 0): ?>
@@ -241,20 +244,13 @@ $credit_sorted_list = [];
                 $ot_hol_res = mysqli_fetch_all($ot_holiday_restday_res);
 
 
-
-
                 //EARNING
                 foreach ($earning_sorted_list as $earning_item):
                     $is_found = false;
                     foreach ($edl_adjs as $earning):
                         if ($earning[2] == "EARNING") {
                             if ($earning[3] == $earning_item):
-                                if ($earning[3] == "TOTAL BASIC PAY"):
-                                    $amount = $earning[4] - ($employee['absent_amount'] + $employee['tardiness_amount']);
-                                    echo "<td>{$amount}</td>";
-                                else:
-                                    echo "<td>{$earning[4]}</td>";
-                                endif;
+                                echo "<td>{$earning[4]}</td>";
                                 $is_found = true;
                                 break;
                             endif;
@@ -287,9 +283,9 @@ $credit_sorted_list = [];
                     endif;
                 endforeach;
 
-//                echo "<pre>";
-//                print_r($ot_holiday_restday_sorted_list);
-//                echo "</pre>";
+                //                echo "<pre>";
+                //                print_r($ot_holiday_restday_sorted_list);
+                //                echo "</pre>";
 
 
                 //OT HOLIDAY REST DAY

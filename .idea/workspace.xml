@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dce15a8e-02a8-46fc-9659-5ad07cd4ec27" name="Default Changelist" comment="database config change">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="dce15a8e-02a8-46fc-9659-5ad07cd4ec27" name="Default Changelist" comment="payroll_register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/payslip_with_record.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/payslip_with_record.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payroll_register.php" beforeDir="false" afterPath="$PROJECT_DIR$/payroll_register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payslip.php" beforeDir="false" afterPath="$PROJECT_DIR$/payslip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/payslip.php" beforeDir="false" afterPath="$PROJECT_DIR$/services/payslip.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
       <workItem from="1687514385669" duration="187000" />
       <workItem from="1687514698073" duration="1729000" />
       <workItem from="1687516500910" duration="34000" />
-      <workItem from="1687516567057" duration="4968000" />
+      <workItem from="1687516567057" duration="7452000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1686990946546</created>
@@ -194,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687515075573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="payroll_register">
+      <created>1687521648197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687521648197</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +221,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="database config change" />
-    <option name="LAST_COMMIT_MESSAGE" value="database config change" />
+    <MESSAGE value="payroll_register" />
+    <option name="LAST_COMMIT_MESSAGE" value="payroll_register" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1686990603940">
@@ -234,10 +241,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1687520867574" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1687515075929">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1687521649310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1687515075929" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1687521649310" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1687523797170">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1687523797170" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1687515295288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
