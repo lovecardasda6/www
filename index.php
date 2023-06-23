@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__."/config/database.php";
-$department_id = $_GET['department_id'];
+$department_id = @$_GET['department_id'];
 ?>
 
 <!doctype html>

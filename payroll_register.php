@@ -1,20 +1,40 @@
 <?php
-include_once __DIR__."/config/database.php";
+include_once __DIR__ . "/config/database.php";
 
 $payroll_id = $_GET['payroll_id'];
+
+//for fetching columns only
+//not for fetching employee amount payment
 $edl_adj_res = mysqli_query($conn, "SELECT DISTINCT(name) as 'description', type 
                                             FROM payroll_transaction_edl_adj 
                                              INNER JOIN payroll_transactions ON payroll_transaction_edl_adj.payroll_transaction_id = payroll_transactions.id
                                              WHERE payroll_id='{$payroll_id}'");
 $edl_adjs = mysqli_fetch_all($edl_adj_res);
 
+
+//for fetching columns only
+//not for fetching employee amount payment
+$ot_holiday_restday = mysqli_query($conn, "SELECT DISTINCT(type) as `description`
+                                                    FROM payroll_transaction_ot_holiday_restday
+                                                    INNER JOIN payroll_transactions ON payroll_transaction_ot_holiday_restday.payroll_transaction_id = payroll_transactions.id
+                                                    WHERE payroll_id='{$payroll_id}'");
+$ot_hol_rest = mysqli_fetch_all($ot_holiday_restday);
+
+
+
 $total_earnings = 1;
+$total_debit = 0;
+$total_ot_hol_rest = count($ot_hol_rest);
 $total_deductions = 0;
 $total_loans = 0;
+$total_credit = 0;
 
 foreach ($edl_adjs as $edl_adj):
     if ($edl_adj[1] == "EARNING")
         $total_earnings += 1;
+
+    if ($edl_adj[1] == "DEBIT")
+        $total_debit += 1;
 
     if ($edl_adj[1] == "DEDUCTION")
         $total_deductions += 1;
@@ -22,11 +42,17 @@ foreach ($edl_adjs as $edl_adj):
     if ($edl_adj[1] == "LOAN")
         $total_loans += 1;
 
+    if ($edl_adj[1] == "CREDIT")
+        $total_credit += 1;
+
 endforeach;
 
 $earning_sorted_list = [];
 $deduction_sorted_list = [];
+$ot_holiday_restday_sorted_list = [];
 $loan_sorted_list = [];
+$debit_sorted_list = [];
+$credit_sorted_list = [];
 
 ?>
 
@@ -95,15 +121,34 @@ $loan_sorted_list = [];
         <thead>
         <tr>
             <th scope="col" class="table-secondary"></th>
-            <th scope="col" colspan="<?= $total_earnings ?>" class="table-success">Earning</th>
-            <th scope="col" colspan="<?= $total_deductions ?>" class="table-primary">Deduction</th>
+
+            <?php if ($total_earnings > 0): ?>
+            <th scope="col" colspan="<?= $total_earnings ?>" class="table-success">Earning</th><?php endif; ?>
+
+            <?php if ($total_debit > 0): ?>
+            <th scope="col" colspan="<?= $total_debit ?>" class="table-success">Debit</th><?php endif; ?>
+
+            <?php if ($total_ot_hol_rest > 0): ?>
+            <th scope="col" colspan="<?= $total_ot_hol_rest ?>" class="table-success">OT/HOLIDAY/RESTDAY</th><?php endif; ?>
+
+
+            <?php if ($total_deductions > 0): ?>
+            <th scope="col" colspan="<?= $total_deductions ?>" class="table-danger">Deduction</th><?php endif; ?>
+
             <?php if ($total_loans > 0): ?>
-                <th scope="col" colspan="<?= $total_loans ?>" class="table-danger">Loan</th>
-            <?php endif; ?>
-            <th scope="col" colspan="2" class="table-success">Computation</th>
+            <th scope="col" colspan="<?= $total_loans ?>" class="table-danger">Loan</th><?php endif; ?>
+
+            <th scope="col" class="table-danger"></th>
+
+            <?php if ($total_credit > 0): ?>
+            <th scope="col" colspan="<?= $total_credit ?>" class="table-danger">Credit</th><?php endif; ?>
+
+            <th scope="col" colspan="2" class="table-secondary">Computation</th>
         </tr>
         <tr>
             <th scope="col" class="table-secondary">Employees</th>
+
+            <!--- FETCH COLUMNS --->
             <?php
             foreach ($edl_adjs as $earning):
                 if ($earning[1] == "EARNING"):
@@ -114,6 +159,26 @@ $loan_sorted_list = [];
                 endif;
             endforeach;
             ?>
+
+
+            <?php
+            foreach ($edl_adjs as $debit):
+                if ($debit[1] == "DEBIT"):
+                    array_push($debit_sorted_list, $debit[0]);
+                    ?>
+                    <th><?= $debit[0] ?></th>
+                <?php
+                endif;
+            endforeach;
+            ?>
+
+            <?php
+            foreach ($ot_hol_rest as $ot_hol_res):
+                array_push($ot_holiday_restday_sorted_list, $ot_hol_res[0]);
+                echo "<th>{$ot_hol_res[0]}</th>";
+            endforeach;
+            ?>
+
 
             <th class="table-success">Gross Pay</th>
 
@@ -138,7 +203,20 @@ $loan_sorted_list = [];
                 endif;
             endforeach;
             ?>
+            <th class="table-danger">TOTAL DED. & LOAN</th>
+
+            <?php
+            foreach ($edl_adjs as $credit):
+                if ($credit[1] == "CREDIT"):
+                    array_push($credit_sorted_list, $credit[0]);
+                    ?>
+                    <th><?= $credit[0] ?></th>
+                <?php
+                endif;
+            endforeach;
+            ?>
             <th>NET PAY</th>
+            <!--- FETCH EDL COLUMNS --->
 
         </tr>
         </thead>
@@ -159,6 +237,13 @@ $loan_sorted_list = [];
                 $edl_adj_res = mysqli_query($conn, "SELECT * FROM payroll_transaction_edl_adj WHERE payroll_transaction_id  = '{$payroll_transaction_id}'");
                 $edl_adjs = mysqli_fetch_all($edl_adj_res);
 
+                $ot_holiday_restday_res = mysqli_query($conn, "SELECT * FROM payroll_transaction_ot_holiday_restday WHERE payroll_transaction_id  = '{$payroll_transaction_id}'");
+                $ot_hol_res = mysqli_fetch_all($ot_holiday_restday_res);
+
+
+
+
+                //EARNING
                 foreach ($earning_sorted_list as $earning_item):
                     $is_found = false;
                     foreach ($edl_adjs as $earning):
@@ -175,11 +260,57 @@ $loan_sorted_list = [];
                             endif;
                         }
                     endforeach;
+                    //if specific type of earning not registered for current employee
+                    //display amount 0.00
                     if (!$is_found):
                         echo "<td>0</td>";
                     endif;
                 endforeach;
-                echo "<td>0</td>";
+
+
+                //DEBIT
+                foreach ($debit_sorted_list as $debit_item):
+                    $is_found = false;
+                    foreach ($edl_adjs as $debit):
+                        if ($debit[2] == "DEBIT") {
+                            if ($debit[3] == $debit_item):
+                                echo "<td>{$debit[4]}</td>";
+                                $is_found = true;
+                                break;
+                            endif;
+                        }
+                    endforeach;
+                    //if specific type of earning not registered for current employee
+                    //display amount 0.00
+                    if (!$is_found):
+                        echo "<td>0</td>";
+                    endif;
+                endforeach;
+
+//                echo "<pre>";
+//                print_r($ot_holiday_restday_sorted_list);
+//                echo "</pre>";
+
+
+                //OT HOLIDAY REST DAY
+                foreach ($ot_holiday_restday_sorted_list as $ot_hol_rest_item):
+                    $is_found = false;
+                    foreach ($ot_hol_res as $val):
+                        if ($val[2] == $ot_hol_rest_item):
+                            echo "<td>{$val[4]}</td>";
+                            $is_found = true;
+                            break;
+                        endif;
+                    endforeach;
+                    //if specific type of earning not registered for current employee
+                    //display amount 0.00
+                    if (!$is_found):
+                        echo "<td>2</td>";
+                    endif;
+                endforeach;
+
+
+                echo "<td class='table-success'>{$employee['gross_pay']}</td>";
 
                 foreach ($deduction_sorted_list as $deduction_item):
                     $is_found = false;
@@ -195,8 +326,9 @@ $loan_sorted_list = [];
                     if (!$is_found):
                         echo "<td>0</td>";
                     endif;
-                endforeach;
+                endforeach;//DEDUCTION
 
+                //LOAN
                 foreach ($loan_sorted_list as $loan_item):
                     $is_found = false;
                     foreach ($edl_adjs as $loan):
@@ -211,7 +343,30 @@ $loan_sorted_list = [];
                     if (!$is_found):
                         echo "<td>0</td>";
                     endif;
-                endforeach;
+                endforeach;//LOAN
+
+
+                echo "<td class='table-danger'>{$employee['total_deduction_and_loans']}</td>";
+
+                //CREDIT
+                foreach ($credit_sorted_list as $credit_item):
+                    $is_found = false;
+                    foreach ($edl_adjs as $credit):
+                        if ($credit[2] == "CREDIT") {
+                            if ($credit[3] == $credit_item):
+                                echo "<td>{$credit[4]}</td>";
+                                $is_found = true;
+                                break;
+                            endif;
+                        }
+                    endforeach;
+                    //if specific type of earning not registered for current employee
+                    //display amount 0.00
+                    if (!$is_found):
+                        echo "<td>0</td>";
+                    endif;
+                endforeach;//CREDIT
+
                 echo "<td>{$employee['net_pay']}</td>";
                 ?>
             </tr>

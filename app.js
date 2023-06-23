@@ -23,16 +23,26 @@ function calculateEarnings() {
 
     let ratePerHour = (monthly_salary * 12 / 313) / 8;
     let totalEarnings = 0;
-    let totalBasicPay = $("#totalBasicPay").text();
 
 
-    let absent = (ratePerHour * 8) * Number($("#absentDays").text());
-    let tardiness = (ratePerHour / 60) * Number($("#tardinessMinutes").text());
+    let absent = Number($("#absentDays").text());
+    let tardiness = Number($("#tardinessMinutes").text());
 
-    $("#absentAmount").text(absent.toFixed(2));
-    $("#tardinessAmount").text(tardiness.toFixed(2));
+    let totalBasicPay = monthly_salary / 2;
 
-    let totalAbsentWithTardinessAmount = absent + tardiness;
+    // if (absent == 0 || tardiness == 0) {
+    //     totalBasicPay = monthly_salary / 2;
+    // } else {
+    //     totalBasicPay = $("#totalBasicPay").text();
+    // };
+
+    let absentAmount = (ratePerHour * 8) * absent;
+    let tardinessAmount = (ratePerHour / 60) * tardiness;
+
+    $("#absentAmount").text(absentAmount.toFixed(2));
+    $("#tardinessAmount").text(tardinessAmount.toFixed(2));
+
+    let totalAbsentWithTardinessAmount = absentAmount + tardinessAmount;
 
     let basicPay = Number(totalBasicPay) - Number(totalAbsentWithTardinessAmount);
     $("#totalBasicPay").text(basicPay.toFixed(2));
@@ -64,12 +74,16 @@ function calculateLoans() {
 }
 
 function calculateGrossPay() {
-    let totalEarnings = Number($("#totalEarnings").html());
-    let ot_holiday_rest_day_amount = Number($("#ot_holiday_rest_day_amount").text())
+    let totalEarnings = Number($("#totalEarnings").text());
+    let totalDebit = Number($("#totalDebit").text());
+    let ot_holiday_rest_day_amount = Number($("#ot_holiday_rest_day_amount").text());
 
-    let grossPay = totalEarnings + ot_holiday_rest_day_amount;
+    let grossPay = totalEarnings + totalDebit + ot_holiday_rest_day_amount;
 
     $("#grossPay").text((grossPay).toFixed(2));
+    //
+    // console.log("totalDebit: " + totalDebit);
+    // console.log("totalGross: " + grossPay);
 }
 
 function calculateTotalDeductionsAndLoans() {
@@ -91,23 +105,6 @@ function calculateNetPay(totalDebit, totalCredit) {
     $("#netPay").text((netPay).toFixed(2));
 
 }
-
-// function calculateNetPay(totalAbsentWithTardinessAmount, totalDebit, totalCredit) {
-//
-//
-//     let totalBasicPay = Number($("#totalBasicPay").text());
-//     let x = totalEarnings - totalBasicPay;
-//     let y = (totalBasicPay - totalAbsentWithTardinessAmount);
-//     let z = x + y;
-//
-//     let netPay = (z + ot_holiday_rest_day_amount + totalDebit) - (totalDeductions + totalLoans + totalCredit);
-//
-//     // console.log(totalAbsentWithTardinessAmount);
-//     // let netPay = (totalEarnings + ot_holiday_rest_day_amount + totalDebit) - (totalDeductions + totalLoans + totalCredit + Number(totalAbsentWithTardinessAmount));
-//
-//     $("#netPay").text((netPay).toFixed(2));
-//
-// }
 
 function computePayroll() {
 

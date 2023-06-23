@@ -24,9 +24,9 @@ endwhile;
     <?php
     $payroll_transaction_edl_adj_query = mysqli_query($conn, "SELECT * FROM payroll_transaction_edl_adj WHERE payroll_transaction_id  = '{$payroll_record['id']}'");
     $payroll_transaction_edl_adj_arr = mysqli_fetch_all($payroll_transaction_edl_adj_query);
-    echo "<pre>";
-    print_r($payroll_transaction_edl_adj_arr);
-    echo "</pre>";
+    //    echo "<pre>";
+    //    print_r($payroll_transaction_edl_adj_arr);
+    //    echo "</pre>";
     //    print_r($payroll_transaction_edl_adj_arr);
     ?>
 
@@ -49,7 +49,7 @@ endwhile;
                     ?>
                     <tr>
                         <td><?= $earning[3] ?></td>
-                        <td contenteditable="true"><?= $earning[4] ?></td>
+                        <td contenteditable="true" <?= $earning[3] == "BASIC PAY" ? "id='totalBasicPay'" : "" ?>><?= $earning[4] ?></td>
                     </tr>
                 <?php
                 endif;
